@@ -7,21 +7,21 @@ export const test = base.extend({
         userProfilePage: async ({browser}, use) => {
             const contextData = await browser.newContext({
                 storageState: STORAGE_STATE_USER_PATH
-            })
-            const page = await contextData.newPage()
-            const profilePage = new ProfilePage(page)
-            await profilePage.navigate()
-            await use(profilePage)
+            });
+            const page = await contextData.newPage();
+            const profilePage = new ProfilePage(page);
+            await profilePage.navigate();
+            await use(profilePage);
         },
         garagePage: async ({browser}, use) => {
         const contextData = await browser.newContext({
             storageState: STORAGE_STATE_USER_PATH
-        })
-        const page = await contextData.newPage()
+        });
+        const page = await contextData.newPage();
         const garagePage = new GaragePage(page);
-        await garagePage.navigate()
+        await garagePage.navigate();
 
-        await use(garagePage)
+        await use(garagePage);
         }
     }
 )

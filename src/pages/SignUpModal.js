@@ -3,22 +3,22 @@ import BasePage from "./BasePage";
 export class SignUpModal extends BasePage {
     constructor(page) {
         super(page, '/', page.locator('app-signup-modal'));
-        this.userNameInput = page.locator('#signupName');
-        this.userLastNameInput = page.locator('#signupLastName');
-        this.userEmailInput = page.locator('#signupEmail');
-        this.userPasswordInput = page.locator('#signupPassword');
-        this.userReEnterPasswordInput = page.locator('#signupRepeatPassword');
-        this.signUpButton = page.locator('button:text("Sign up")');
+        this.userNameInput = this._page.locator('#signupName');
+        this.userLastNameInput = this._page.locator('#signupLastName');
+        this.userEmailInput = this._page.locator('#signupEmail');
+        this.userPasswordInput = this._page.locator('#signupPassword');
+        this.userReEnterPasswordInput = this._page.locator('#signupRepeatPassword');
+        this.signUpButton = this._page.locator('button:text("Sign up")');
 
-        this.registrationButton = page.locator('.modal-footer .btn-primary');
-        this.closeButton = page.locator('button.close');
+        this.registrationButton = this._page.locator('.modal-footer .btn-primary');
+        this.closeButton = this._page.locator('button.close');
 
-        this.formTitle = page.locator('.modal-title');
+        this.formTitle = this._page.locator('.modal-title');
 
         // warning panel
-        this.nameWarningsPanel = page.locator('div.invalid-feedback');
+        this.nameWarningsPanel = this._page.locator('div.invalid-feedback');
 
-        this.alertMessage = page.locator(".alert-danger")
+        this.alertMessage = this._page.locator(".alert-danger");
     }
 
     async fillInput(locator, text) {
