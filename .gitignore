@@ -3,5 +3,5 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 .idea
-state/
+/state/user-state.json
 .env

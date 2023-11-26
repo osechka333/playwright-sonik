@@ -14,14 +14,13 @@ export const test = base.extend({
             await use(profilePage);
         },
         garagePage: async ({browser}, use) => {
-        const contextData = await browser.newContext({
-            storageState: STORAGE_STATE_USER_PATH
-        });
-        const page = await contextData.newPage();
-        const garagePage = new GaragePage(page);
-        await garagePage.navigate();
-
-        await use(garagePage);
+            const contextData = await browser.newContext({
+                storageState: STORAGE_STATE_USER_PATH
+            });
+            const page = await contextData.newPage();
+            const garagePage = new GaragePage(page);
+            await garagePage.navigate();
+            await use(garagePage);
         }
     }
 )
