@@ -5,3 +5,4 @@
 .idea
 /state/
 /state/user-state.json
+.DS_Store
