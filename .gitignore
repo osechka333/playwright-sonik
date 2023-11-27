@@ -1,7 +1,8 @@
-node_modules/
+/node_modules/
 /test-results/
 /playwright-report/
 /playwright/.cache/
 .idea
-/state/user-state.json
 .env
+/state/
+/state/user-state.json
