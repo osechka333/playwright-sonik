@@ -3,6 +3,6 @@
 /playwright-report/
 /playwright/.cache/
 .idea
+.env
 /state/
 /state/user-state.json
-.DS_Store
