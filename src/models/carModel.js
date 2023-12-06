@@ -1,4 +1,3 @@
-
 export default class CarModel {
     constructor({carBrandId, carModelId, mileage}) {
         this.carBrandId = carBrandId

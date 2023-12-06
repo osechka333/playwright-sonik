@@ -8,11 +8,11 @@ export const CUSTOM_PROFILE_RESPONSE_BODY = {
             "lastName": "UpdatedLastname",
             "country": "Ukraine"
         }
-}
+};
 
 export const customProfile = {
     name: 'UpdatedName',
     lastName: 'UpdatedLastname',
     country: 'USA',
     birthday: '1.11.2023'
-}
+};
