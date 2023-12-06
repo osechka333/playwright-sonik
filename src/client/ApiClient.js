@@ -1,7 +1,7 @@
 import {config} from "../../config/config.js";
 import {CookieJar} from "tough-cookie";
 import AuthController from "../controllers/AuthController.js";
-import CarController from "../controllers/CarContoller.js";
+import CarController from "../controllers/CarController.js";
 
 export default class ApiClient {
     constructor(options) {

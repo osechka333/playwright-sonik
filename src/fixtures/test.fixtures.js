@@ -3,7 +3,7 @@ import {STORAGE_STATE_USER_PATH} from "../data/storageState";
 import ProfilePage from "../pages/ProfilePage";
 import GaragePage from "../pages/GaragePage";
 import AuthController from "../controllers/AuthController.js";
-import CarController from "../controllers/CarContoller.js";
+import CarController from "../controllers/CarController.js";
 import {CookieJar} from "tough-cookie";
 import {config} from "../../config/config.js";
 import {USER} from "../data/users.js";

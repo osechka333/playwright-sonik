@@ -43,6 +43,6 @@ export const USER_CARS_RESPONSE_BODY = {
             "brand": "Audi",
             "model": "R8",
             "logo": "audi.png"
-        },
+        }
     ]
 };
