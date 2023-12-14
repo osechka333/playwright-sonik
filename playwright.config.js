@@ -42,7 +42,13 @@ const config =  defineConfig({
       name: 'api',
       use: { ...devices['Desktop Chrome']},
       dependencies: [],
-      testMatch: 'tests/api/**/*.spec.js',
+      testMatch: 'tests/api/*.spec.js',
+    },
+    {
+      name: 'ui',
+      use: { ...devices['Desktop Chrome']},
+      dependencies: [],
+      testMatch: 'tests/ui/*.spec.js',
     }
   ],
 });

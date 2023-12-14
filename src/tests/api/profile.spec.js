@@ -1,14 +1,11 @@
 import {test} from '../../fixtures/test.fixtures.js'
 import {expect} from "@playwright/test";
-import {brands, CUSTOM_BRANDS_RESPONSE_BODY} from "./fixtures/brands.js";
-import {CUSTOM_MODELS_RESPONSE_BODY} from "./fixtures/models.js";
-import {CUSTOM_PROFILE_RESPONSE_BODY, customProfile} from "./fixtures/profile.js";
+import {CUSTOM_PROFILE_RESPONSE_BODY, customProfile} from "../ui/fixtures/profile.js";
 test.describe('User profile', ()=>{
     test('page should contain valid user info', async ({userProfilePage})=>{
         await expect(userProfilePage.userName, "valid user name should be displayed")
             .toHaveText(`AqaAndriy AqaLastName`);
     });
-    /* FIRST TASK IMPLEMENTATION */
     test("Check MOCKED request for profile", async ({ userProfilePage }) => {
         const { page } = userProfilePage;
 

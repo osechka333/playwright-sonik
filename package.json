@@ -10,7 +10,7 @@
     "test:debug": "npx playwright test --debug",
     "test:positive": "npx playwright test -c ./playwright.config.positive.js",
     "test:negative": "npx playwright test -c ./playwright.config.negative.js",
-    "test:ui": "npx playwright test --ui",
+    "test:ui": "npx playwright test --project=ui",
     "report": "npx playwright show-report"
   },
   "keywords": [],
