@@ -15,10 +15,4 @@ jobs:
           cp '.env.stage' '.env'
       - name: "Run e2e tests"
         run: |
-          HTTP_CREDENTIALS_USERNAME=${{secrets.HTTP_CREDENTIALS_USERNAME}} HTTP_CREDENTIALS_PASSWORD=${{secrets.HTTP_CREDENTIALS_PASSWORD}} ENV: 'stage' docker-compose up --exit-code-from auto-tests
-      - name: "Upload artifacts"
-#        if: failure()
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: test-results
-#          path: playwright-report/
+          HTTP_CREDENTIALS_USERNAME=${{secrets.HTTP_CREDENTIALS_USERNAME}} HTTP_CREDENTIALS_PASSWORD=${{secrets.HTTP_CREDENTIALS_PASSWORD}} ENV: '.env.stage' docker-compose up --exit-code-from auto-tests

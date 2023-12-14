@@ -24,12 +24,12 @@ jobs:
           HTTP_CREDENTIALS_USERNAME: ${{secrets.HTTP_CREDENTIALS_USERNAME}}
           HTTP_CREDENTIALS_PASSWORD: ${{secrets.HTTP_CREDENTIALS_PASSWORD}}
           ENV: 'stage'
-      #      - name: "Upload artifacts"
-      #        if: failure()
-      #        uses: actions/upload-artifact@v3
-      #        with:
-      #          name: github-pages
-      #          path: playwright-report/
+      - name: "Upload artifacts"
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+            name: github-pages
+            path: playwright-report/
       - name: Fix permissions
         if: ${{ always() }}
         run: |
