@@ -1,8 +1,8 @@
 import {expect, test} from "@playwright/test";
 import {USER} from "../../data/users.js";
 import CreateCarModel from "../../models/CreateCarModel.js";
-import {DEFAULT_BRANDS_RESPONSE_BODY} from "../fixtures/brands.js";
-import {DEFAULT_BRAND_MODELS} from "../fixtures/models.js";
+import {DEFAULT_BRANDS_RESPONSE_BODY} from "../ui/fixtures/brands.js";
+import {DEFAULT_BRAND_MODELS} from "../ui/fixtures/models.js";
 import ApiClient from "../../client/ApiClient.js";
 
 test.describe('Create Cars', ()=>{

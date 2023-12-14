@@ -3,8 +3,8 @@ import { test } from '../../fixtures/test.fixtures';
 import { expect } from '@playwright/test';
 import {config as testConfig} from "../../../config/config";
 import { got } from 'got';
-import {CUSTOM_BRANDS_RESPONSE_BODY, DEFAULT_BRANDS_RESPONSE_BODY} from "../fixtures/brands";
-import {DEFAULT_BRAND_MODELS} from "../fixtures/models";
+import {CUSTOM_BRANDS_RESPONSE_BODY, DEFAULT_BRANDS_RESPONSE_BODY} from "../ui/fixtures/brands";
+import {DEFAULT_BRAND_MODELS} from "../ui/fixtures/models";
 import {USER} from "../../data/users";
 
 /* APPROACH WITH GOT */

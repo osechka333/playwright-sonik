@@ -1,8 +1,8 @@
-import {test} from '../fixtures/test.fixtures'
+import {test} from '../../fixtures/test.fixtures.js'
 import {expect} from "@playwright/test";
-import {brands, CUSTOM_BRANDS_RESPONSE_BODY} from "./fixtures/brands";
-import {CUSTOM_MODELS_RESPONSE_BODY} from "./fixtures/models";
-import {CUSTOM_PROFILE_RESPONSE_BODY, customProfile} from "./fixtures/profile";
+import {brands, CUSTOM_BRANDS_RESPONSE_BODY} from "./fixtures/brands.js";
+import {CUSTOM_MODELS_RESPONSE_BODY} from "./fixtures/models.js";
+import {CUSTOM_PROFILE_RESPONSE_BODY, customProfile} from "./fixtures/profile.js";
 test.describe('User profile', ()=>{
     test('page should contain valid user info', async ({userProfilePage})=>{
         await expect(userProfilePage.userName, "valid user name should be displayed")

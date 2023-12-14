@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SignUpModal } from "../pages/SignUpModal";
+import { SignUpModal } from "../../pages/SignUpModal.js";
 test.describe("Sign Up form positive testing", ()=> {
     let page;
     let signUpPage;

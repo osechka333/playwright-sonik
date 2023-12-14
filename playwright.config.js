@@ -9,7 +9,7 @@ const config =  defineConfig({
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: 4,
+  workers: 2,
   reporter: [
     ['html', {open: process.env.CI ? 'never' : 'on-failure'}],
     ['list']
@@ -36,8 +36,7 @@ const config =  defineConfig({
     {
       name: 'main',
       use: { ...devices['Desktop Chrome'] },
-      dependencies: ['setup'],
-      testIgnore: 'tests/**/*.spec.js',
+      dependencies: ['setup']
     },
     {
       name: 'api',

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SignUpModal } from "../pages/SignUpModal";
+import { SignUpModal } from "../../pages/SignUpModal.js";
 
 const redBorderColor = 'rgb(220, 53, 69)';
 test.describe("Sign-up form validation", ()=> {

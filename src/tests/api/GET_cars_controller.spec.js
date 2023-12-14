@@ -1,11 +1,11 @@
 import {expect, test} from "@playwright/test";
 import {USER} from "../../data/users.js";
-import {DEFAULT_BRANDS_RESPONSE_BODY} from "../fixtures/brands.js";
-import {DEFAULT_BRAND_MODELS, DEFAULT_MODELS_RESPONSE_BODY} from "../fixtures/models.js";
+import {DEFAULT_BRANDS_RESPONSE_BODY} from "../ui/fixtures/brands.js";
+import {DEFAULT_BRAND_MODELS, DEFAULT_MODELS_RESPONSE_BODY} from "../ui/fixtures/models.js";
 import ApiClient from "../../client/ApiClient.js";
 import CreateCarModel from "../../models/CreateCarModel.js";
 import {CarSchema} from "../../schema/CarSchema.js";
-import {USER_CARS_RESPONSE_BODY} from "../fixtures/cars.js";
+import {USER_CARS_RESPONSE_BODY} from "../ui/fixtures/cars.js";
 
 test.describe('GET all cars', ()=> {
     let client;

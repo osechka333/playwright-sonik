@@ -1,9 +1,9 @@
 import { expect } from '@playwright/test';
 
-import { test } from '../fixtures/test.fixtures';
-import {DEFAULT_BRANDS_RESPONSE_BODY} from "./fixtures/brands";
-import {DEFAULT_BRAND_MODELS} from "./fixtures/models";
-import {FIRST_USER_CAR_RESPONSE_BODY} from "./fixtures/cars";
+import { test } from '../../fixtures/test.fixtures.js';
+import {DEFAULT_BRANDS_RESPONSE_BODY} from "./fixtures/brands.js";
+import {DEFAULT_BRAND_MODELS} from "./fixtures/models.js";
+import {FIRST_USER_CAR_RESPONSE_BODY} from "./fixtures/cars.js";
 test.describe("API requests", ()=> {
     /* SECOND TASK IMPLEMENTATION */
     test("Check the FIRST car of a current user", async ({userApiClient}) => {
