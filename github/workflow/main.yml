@@ -1,0 +1,24 @@
+name: "Playwright e2e tests"
+on: push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout to tests repository"
+        uses: actions/checkout@v4
+        with:
+          repository: ${{github.repository}}
+          ref: ${{github.ref}}
+      - name: "copy environment variables"
+        run: |
+          cp '.env.stage' '.env'
+      - name: "Run e2e tests"
+        run: |
+          HTTP_CREDENTIALS_USERNAME=${{secrets.HTTP_CREDENTIALS_USERNAME}} HTTP_CREDENTIALS_PASSWORD=${{secrets.HTTP_CREDENTIALS_PASSWORD}} docker-compose up --exit-code-from auto-tests
+      - name: "Upload artifacts"
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: playwright-report/
