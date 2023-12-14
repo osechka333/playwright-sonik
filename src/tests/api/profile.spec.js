@@ -1,7 +1,7 @@
 import {test} from '../../fixtures/test.fixtures.js'
 import {expect} from "@playwright/test";
 import {CUSTOM_PROFILE_RESPONSE_BODY, customProfile} from "../ui/fixtures/profile.js";
-test.describe('User profile', ()=>{
+test.describe.only('User profile', ()=>{
     test('page should contain valid user info', async ({userProfilePage})=>{
         await expect(userProfilePage.userName, "valid user name should be displayed")
             .toHaveText(`AqaAndriy AqaLastName`);

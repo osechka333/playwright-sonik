@@ -4,7 +4,7 @@ dotenv.config({
     path:  process.env.ENV ? `./.env.${process.env.ENV}` : './.env'
 });
 
-console.log("Using env : ", dotenv.config.path);
+console.log("Using env : ", process.env.ENV);
 
 export const config = {
     baseURL: process.env.BASE_URL,
