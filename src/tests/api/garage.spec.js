@@ -1,8 +1,8 @@
 import { expect } from '@playwright/test';
 
-import { test } from '../fixtures/test.fixtures';
-import {brands, CUSTOM_BRANDS_RESPONSE_BODY} from "./fixtures/brands";
-import {CUSTOM_MODELS_RESPONSE_BODY, models} from "./fixtures/models";
+import { test } from '../../fixtures/test.fixtures.js';
+import {brands, CUSTOM_BRANDS_RESPONSE_BODY} from "../ui/fixtures/brands.js";
+import {CUSTOM_MODELS_RESPONSE_BODY, models} from "../ui/fixtures/models.js";
 test.describe("Check the garage page view", ()=> {
     test("Check the main page title and url", async ({garagePage}) => {
         expect(await garagePage.getMainTitle()).toBe('Hillel Qauto');

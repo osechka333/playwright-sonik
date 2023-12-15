@@ -3,10 +3,10 @@ import { wrapper } from 'axios-cookiejar-support';
 import { CookieJar } from 'tough-cookie';
 
 import { test } from '../../fixtures/test.fixtures';
-import {DEFAULT_BRANDS_RESPONSE_BODY} from "../fixtures/brands.js";
-import {DEFAULT_BRAND_MODELS} from "../fixtures/models.js";
+import {DEFAULT_BRANDS_RESPONSE_BODY} from "../ui/fixtures/brands.js";
+import {DEFAULT_BRAND_MODELS} from "../ui/fixtures/models.js";
 import axios from "axios";
-import {FIRST_USER_CAR_RESPONSE_BODY} from "../fixtures/cars.js";
+import {FIRST_USER_CAR_RESPONSE_BODY} from "../ui/fixtures/cars.js";
 import {config as testConfig} from "../../../config/config.js";
 import {USER} from "../../data/users.js";
 
