@@ -16,3 +16,9 @@ jobs:
       - name: "Run e2e tests"
         run: |
           HTTP_CREDENTIALS_USERNAME=${{secrets.HTTP_CREDENTIALS_USERNAME}} HTTP_CREDENTIALS_PASSWORD=${{secrets.HTTP_CREDENTIALS_PASSWORD}} docker-compose up --exit-code-from auto-tests
+      - name: Upload Pages artifact
+        if: ${{ always() }}
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: github-pages
+          path: playwright-report/
