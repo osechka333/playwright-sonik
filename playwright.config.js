@@ -45,10 +45,10 @@ const config =  defineConfig({
       testMatch: 'tests/api/*.spec.js',
     },
     {
-      name: 'ui',
+      name: 'ui-example',
       use: { ...devices['Desktop Chrome']},
       dependencies: [],
-      testMatch: 'tests/ui/*.spec.js',
+      testMatch: 'tests/*.spec.js',
     }
   ],
 });
